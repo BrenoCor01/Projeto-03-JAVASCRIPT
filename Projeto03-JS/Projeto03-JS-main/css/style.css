@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 650px;
+    /* border: 1px solid #333; */
+    border-bottom: 60px solid rgb(126, 91, 8);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#39b2e2, #889aa1);
+}
+.tubo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: tubo-animation 1.5s infinite linear;
+}
+.sapo{
+    width: 150px;
+    position: absolute;
+    bottom: -30px;
+}
+.pular{
+    animation: pular 500ms ease-out;
+}
+.nuvem{
+    position: absolute;
+    width: 500px;
+    animation: nuvem-animation 20s infinite linear;
+}
+.fim{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    display: none;
+    top: 40%;
+    left: 40%;
+    padding: 50px 100px;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /*deixa o fundo com efeito de vidro*/
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur( 55px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.fim h3, p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;  
+}
+.fim .reinicia{
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.244);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    background-color: #eb0d0d;
+}
+#score{
+    background-color: rgba(255, 251, 35, 0.788);
+    padding: 10px 15px;
+    color: rgb(42, 42, 42);
+    border-radius: 10px;
+    float: right;
+    margin: 30px 40px;
+    box-shadow:  8px 7px 40px rgb(255, 255, 255);
+}
+
+@keyframes tubo-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pular{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation{
+    from{
+        right: -500px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
